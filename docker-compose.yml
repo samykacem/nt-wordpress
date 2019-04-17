@@ -5,7 +5,6 @@ services:
   adminer:
     container_name: adminer
     image: adminer
-    restart: always
     links: 
       - db
     depends_on:
@@ -16,7 +15,6 @@ services:
   db:
     container_name: mysql
     image: mysql:5.6
-    restart: always
     volumes:
       - ./volumes/mysql:/var/lib/mysql
     environment:
@@ -36,7 +34,6 @@ services:
       - ./volumes/wordpress/theme:/var/www/html/wp-content/themes/theme_name
       - ./volumes/wordpress/plugins:/var/www/html/wp-content/plugins
       - ./volumes/wordpress/uploads:/var/www/html/wp-content/uploads
-    restart: always
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: root

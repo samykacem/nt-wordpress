@@ -5,3 +5,6 @@
 
 ## Clean unsused objects
 ```docker system prune```
+
+## Chrome injector
+```https://github.com/Findus23/matomo-injector```
