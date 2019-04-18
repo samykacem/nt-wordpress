@@ -1,4 +1,4 @@
-# Docker
+# Piwik/Matomo
 
 ## Clean all image
 ```docker rmi $(docker images -a -q) -f```
